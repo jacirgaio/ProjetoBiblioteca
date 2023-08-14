@@ -2,7 +2,6 @@
 @{
     ViewData["Title"] = "Listagem de Empréstimos";
 }
-
 <div class="row">
     <div class="col-md-12">
     <form class="form-inline" method="POST">
@@ -22,7 +21,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        <table > 
+        <table class="table table-striped" > 
             <thead>
                 <tr><th>Id</th>
                 <th>Usuario</th>
@@ -36,15 +35,20 @@
             <tbody>
                 @foreach(Emprestimo e in Model)
                 {
-                <tr>
-                    <td>@e.Id</td>
-                    <td>@e.NomeUsuario</td>
-                    <td>@e.DataEmprestimo.ToString("dd/MM/yyyy")</td>
-                    <td>@e.DataDevolucao.ToString("dd/MM/yyyy")</td>
-                    <td>@e.Livro.Titulo</td>
-                    <td>@e.Livro.Autor</td>
-                    <td><a href="/Emprestimo/Edicao/@e.Id">Editar</a></td>
-                </tr>
+                    @if (string.IsNullOrEmpty(Request.Form["Filtro"]) || 
+                         (Request.Form["TipoFiltro"] == "Usuario" && e.NomeUsuario.Contains(Request.Form["Filtro"])) ||
+                         (Request.Form["TipoFiltro"] == "Livro" && (e.Livro.Titulo.Contains(Request.Form["Filtro"]) || e.Livro.Autor.Contains(Request.Form["Filtro"]))))
+                    {
+                        <tr>
+                            <td>@e.Id</td>
+                            <td>@e.NomeUsuario</td>
+                            <td>@e.DataEmprestimo.ToString("dd/MM/yyyy")</td>
+                            <td>@e.DataDevolucao.ToString("dd/MM/yyyy")</td>
+                            <td>@e.Livro.Titulo</td>
+                            <td>@e.Livro.Autor</td>
+                            <td><a href="/Emprestimo/Edicao/@e.Id">Editar</a></td>
+                        </tr>
+                    }
                 }
             </tbody>
         </table>
