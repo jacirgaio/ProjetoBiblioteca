@@ -10,26 +10,26 @@
             <legend>Usuario</legend>
             <div class="form-group">
                 <label asp-for="Emprestimo.NomeUsuario">Nome</label>
-                <input asp-for="Emprestimo.NomeUsuario" class="form-control" id="nome" />
+                <input asp-for="Emprestimo.NomeUsuario" class="form-control campo-erro" id="nome" />
             </div>
             <div class="form-group">
                 <label asp-for="Emprestimo.Telefone">Telefone</label>
-                <input asp-for="Emprestimo.Telefone" class="form-control" id="telefone" />
+                <input asp-for="Emprestimo.Telefone" class="form-control campo-erro" id="telefone" />
             </div>
         </fieldset>
         <fieldset>
             <legend>Livro</legend>
             <div class="form-group">
                 <label asp-for="Emprestimo.DataEmprestimo">Data de Empréstimo</label>
-                <input type="date" asp-for="Emprestimo.DataEmprestimo" class="form-control" id="dataEmprestimo" />
+                <input type="date" asp-for="Emprestimo.DataEmprestimo" class="form-control campo-erro" id="dataEmprestimo" />
             </div>
             <div class="form-group">
                 <label asp-for="Emprestimo.DataDevolucao">Data de Devolução</label>
-                <input type="date" asp-for="Emprestimo.DataDevolucao" class="form-control" id="dataDevolucao" />
+                <input type="date" asp-for="Emprestimo.DataDevolucao" class="form-control campo-erro" id="dataDevolucao" />
             </div>
             <div class="form-group">
                 <label asp-for="Emprestimo.LivroId">Livro</label>
-                <select asp-for="Emprestimo.LivroId" class="form-control" id="livroEmprestado" >
+                <select asp-for="Emprestimo.LivroId" class="form-control campo-erro" id="livroEmprestado" >
                     @foreach(Livro l in Model.Livros)
                     {
                         <option value="@l.Id">@l.Titulo</option>
@@ -37,7 +37,8 @@
                 </select>
             </div>
         </fieldset>
+        <h5 id="mensagens-erro" class="campo-erro"></h5>
         <input type="submit" value="Salvar" class="btn btn-primary"/>
     </form>
-    <p id="mensagens-erro" class="mensagem-erro"></p>
+    
 </div>

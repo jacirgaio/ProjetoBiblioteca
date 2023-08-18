@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\josiane\\OneDrive\\tii-jacir\\Biblioteca\\Biblioteca.csproj": {}
+    "C:\\Users\\josiane\\OneDrive\\tii-jacir\\Biblioteca\\Biblioteca.csproj": {}
   },
   "projects": {
-    "c:\\Users\\josiane\\OneDrive\\tii-jacir\\Biblioteca\\Biblioteca.csproj": {
+    "C:\\Users\\josiane\\OneDrive\\tii-jacir\\Biblioteca\\Biblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\josiane\\OneDrive\\tii-jacir\\Biblioteca\\Biblioteca.csproj",
+        "projectUniqueName": "C:\\Users\\josiane\\OneDrive\\tii-jacir\\Biblioteca\\Biblioteca.csproj",
         "projectName": "Biblioteca",
-        "projectPath": "c:\\Users\\josiane\\OneDrive\\tii-jacir\\Biblioteca\\Biblioteca.csproj",
+        "projectPath": "C:\\Users\\josiane\\OneDrive\\tii-jacir\\Biblioteca\\Biblioteca.csproj",
         "packagesPath": "C:\\Users\\josiane\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\josiane\\OneDrive\\tii-jacir\\Biblioteca\\obj\\",
+        "outputPath": "C:\\Users\\josiane\\OneDrive\\tii-jacir\\Biblioteca\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\josiane\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -27,9 +27,6 @@ C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Bibliotec
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.TagHelpers.input.cache
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.TagHelpers.output.cache
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.RazorCoreGenerate.cache
-C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Emprestimo\Cadastro.cshtml.g.cs
-C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Emprestimo\Edicao.cshtml.g.cs
-C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Emprestimo\Listagem.cshtml.g.cs
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
@@ -51,3 +48,9 @@ C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\staticweb
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.dll
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.pdb
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.genruntimeconfig.cache
+C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Emprestimo\Cadastro.cshtml.g.cs
+C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Emprestimo\Edicao.cshtml.g.cs
+C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Emprestimo\Listagem.cshtml.g.cs
+C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\EditarUsuarios.cshtml.g.cs
+C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\ListarUsuarios.cshtml.g.cs
+C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\RegistrarUsuarios.cshtml.g.cs
