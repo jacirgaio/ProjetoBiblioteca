@@ -25,6 +25,7 @@ namespace Biblioteca.Models
                 emprestimo.LivroId = e.LivroId;
                 emprestimo.DataEmprestimo = e.DataEmprestimo;
                 emprestimo.DataDevolucao = e.DataDevolucao;
+                emprestimo.Deolvido = e.Deolvido:
 
                 bc.SaveChanges();
             }
@@ -42,35 +43,34 @@ namespace Biblioteca.Models
         {
             using(BibliotecaContext bc = new BibliotecaContext())
             {
-                /**
-                 IQueryable<Livro> query;
+                IQueryable<Emprestimo> query;
                 
                 if(filtro != null)
                 {
                     //definindo dinamicamente a filtragem
                     switch(filtro.TipoFiltro)
                     {
-                        case "Autor":
-                            query = bc.Livros.Where(l => l.Autor.Contains(filtro.Filtro));
+                        case "Usuario":
+                            query = bc.Emprestimos.Where(e => e.NomeUsuario.Contains(filtro.Filtro));
                         break;
 
-                        case "Titulo":
-                            query = bc.Livros.Where(l => l.Titulo.Contains(filtro.Filtro));
+                        case "Livro":
+                            query = bc.Emprestimos.Where(e => e.Livro.Titulo.Contains(filtro.Filtro));
                         break;
 
                         default:
-                            query = bc.Livros;
+                            query = bc.Emprestimos;
                         break;
                     }
                 }
                 else
                 {
                     // caso filtro não tenha sido informado
-                    query = bc.Livros;
+                    query = bc.Emprestimos;
                 }
-                **/
-                //ordenação padrão
-                return bc.Emprestimos.Find(id);
+            
+                //ordenação padrão antigo
+                return query.Include(e => e.Livro).OrderByDescending(e => e.DataDevolucao).ToList;
             }
         }
     }

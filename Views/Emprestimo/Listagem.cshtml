@@ -37,7 +37,7 @@
             <tbody>
                 @foreach (Emprestimo e in Model.OrderByDescending(e => e.DataDevolucao))
                 {
-                    <tr>
+                    <tr class="@((e.DataDevolucao < DateTime.Today) ? "table-danger" : "")">
                         <td>@e.Id</td>
                         <td>@e.NomeUsuario</td>
                         <td>@e.DataEmprestimo.ToString("dd/MM/yyyy")</td>

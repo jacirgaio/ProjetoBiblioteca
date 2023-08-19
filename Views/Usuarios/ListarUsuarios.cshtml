@@ -1,26 +1,16 @@
-@model List<Usuarios>
+@model Usuario
 
-<h1>Usuários cadastrados no sistema</h1>
-<p class="text-danger"> @ViewData["mensagem"]</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="row">Nome</th>
-            <th scope="row">Login</th>
-            <th scope="row">Tipo</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var u in Model)
-        {
-            <tr>
-                <td>@u.Nome</td>
-                <td>@u.Login</td>
-                <td>@(u.Tipo == TipoUsuario.ADMIN ? "Administrador" : "Padrão")</td>
-                <td><a href="editarUsuario?id=@u.Id">editar</a></td>
-                <td><a href="ExcluirUsuario?id=@u.Id">excluir</a></td>
-            </tr>
-        }
-    </tbody>
-</table>
+<h1>Realize a Edição do Usuário</h1>
+
+<form action="EditarUsuario" method="post">
+    <input type="text" name="Nome" id="userNome" value="@Model.Nome">
+    <input type="text" name="login" id="userLogin" value="@Model.login">
+    <input type="text" name="senha" id="userSenha" value="@Model.senha">
+    <select name="tipo" id="userTipo">
+        <option value="@Usuario.ADMIN">Administrador</option>
+        <option value="@Usuario.PADRAO">Padrão</option>
+    </select>
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="CONCLUIR EDIÇÃO">
+</form>
 <a href="RegistrarUsuarios">Registrar novo usuário</a>
