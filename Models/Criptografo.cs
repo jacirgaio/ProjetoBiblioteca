@@ -13,14 +13,14 @@ namespace Biblioteca.Models
         {
             MD5 md5Hasher = MD5.Create();
             
-            byte[] By = Encoding.default.GetBytes(textoSemFormatacao);
+            byte[] By = Encoding.Default.GetBytes(textoSemFormatacao);
             byte[] byteCriptografado = md5Hasher.ComputeHash(By);
 
             StringBuilder SB = new StringBuilder();
 
             foreach (byte b in byteCriptografado)
             {
-                string DebugB = b.ToList("x2");
+                string DebugB = b.ToString("x2");
                 SB.Append(DebugB);
             }      
 

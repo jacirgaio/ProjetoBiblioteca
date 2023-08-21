@@ -33,7 +33,7 @@ namespace Biblioteca.Controllers
         [HttpPost]
         public IActionResult Login(string login, string senha)
         {
-            if(Autenticacao.verificaLoginSenha(Login, senha, this))
+            if(Autenticacao.verificaLoginSenha(login, senha, this))
             {
                 return RedirectToAction("Index");
             }

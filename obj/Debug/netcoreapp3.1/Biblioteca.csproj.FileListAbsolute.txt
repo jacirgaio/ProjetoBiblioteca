@@ -54,3 +54,4 @@ C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Vie
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\EditarUsuarios.cshtml.g.cs
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\ListarUsuarios.cshtml.g.cs
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\RegistrarUsuarios.cshtml.g.cs
+C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Admin.cshtml.g.cs
