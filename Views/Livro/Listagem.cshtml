@@ -1,21 +1,36 @@
 @model List<Livro>
 @{
     ViewData["Title"] = "Listagem de Livros";
+    int FiltroPPagina = Int32.Parse(ViewData["emprestimoPPagina"].ToString());
+    int PaginaAtual = Int32.Parse(ViewData["paginaAtual"].ToString());
+    int NumLivroPP = (Model.Count < FiltroPPagina ? Model.Count : FiltroPPagina);
+    int NumTotalPagina = 1;
+        if (NumLivroPP > 0)
+        {
+            NumTotalPagina = Model.Count / NumLivroPP + (Model.Count % NumLivroPP == 0 ? 0 : 1);
+        }
 }
 <div class="row">
     <div class="col-md-12">
-    <form class="form-inline" method="POST">
-        <div class="form-group mb-2">
-            <select name="TipoFiltro" class="form-control">
-                <option value="Autor">Autor</option>
-                <option value="Titulo">Título</option>
+        <form class="form-inline" method="POST">
+            <div class="form-group mb-2">
+                <select name="TipoFiltro" class="form-control">
+                    <option value="Autor">Autor</option>
+                    <option value="Titulo">Título</option>
+                </select>
+            </div>
+            <div class="form-group mb-2 mx-sm-3">
+                <input type="text" placeholder="Filtro" name="Filtro" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary mb-2 mr-5">Pesquisar</button>
+            <select name="itensPPagina" id="itensPPagina">
+                <option value="5">5 Livros</option>
+                <option value="10">10 Livros</option>
+                <option value="20">20 Livros</option>
+                <option value="50">50 Livros</option>
+                <option value=@Model.Count>Todos</option>
             </select>
-        </div>
-        <div class="form-group mb-2 mx-sm-3">
-            <input type="text" placeholder="Filtro" name="Filtro" class="form-control" />
-        </div>
-        <button type="submit" class="btn btn-primary mb-2">Pesquisar</button>
-    </form>
+        </form>
     </div>
 </div>
 
@@ -33,14 +48,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach(Livro l in Model)
+                    @for (int i = (PaginaAtual - 1) * NumLivroPP; i < NumLivroPP * PaginaAtual && i < Model.Count; i++)
                     {
                         <tr>
-                            <td>@l.Id</td>
-                            <td>@l.Titulo</td>
-                            <td>@l.Autor</td>
-                            <td>@l.Ano</td>
-                            <td><a href="/Livro/Edicao/@l.Id">Editar</a></td>
+                            <td>@Model[i].Id</td>
+                            <td>@Model[i].Titulo</td>
+                            <td>@Model[i].Autor</td>
+                            <td>@Model[i].Ano</td>
+                            <td><a href="/Livro/Edicao/@Model[i].Id">Editar</a></td>
                         </tr>
                     }
                 </tbody>
@@ -51,4 +66,24 @@
             <h2>Nenhum registro encontrado!!</h2>
         }
     </div>
+</div>
+
+<div id="SeletorPaginas" class="text-center mt-3">
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            @for (int i = 1; i <= NumTotalPagina; i++)
+            {
+                <li class="page-item @(i == PaginaAtual ? "active" : "")">
+                    @if (i == PaginaAtual)
+                    {
+                        <span class="page-link">@i <span class="sr-only">(current)</span></span>
+                    }
+                    else
+                    {
+                        <a class="page-link" href="/Livro/Listagem?PaginaAtual=@i">@i</a>
+                    }
+                </li>
+            }
+        </ul>
+    </nav>
 </div>
