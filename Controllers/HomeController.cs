@@ -49,12 +49,5 @@ namespace Biblioteca.Controllers
             return View();
         }
 
-        public IActionResult Logout()
-        {
-            // Limpar a sessão e redirecionar para a página de login
-            HttpContext.Session.Clear();
-            return RedirectToAction("Login", "Home");
-        }
-
     }
 }

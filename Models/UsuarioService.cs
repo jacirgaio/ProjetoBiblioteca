@@ -7,7 +7,15 @@ namespace Biblioteca.Models
 {
     public class UsuarioService
     {
-        public List<Usuario> Listar() 
+        public Usuario ListarId(int id) 
+        {
+            using(BibliotecaContext bc = new BibliotecaContext())
+            {
+                return bc.Usuarios.Find(id); 
+            }
+        }
+
+         public List<Usuario> Listar() 
         {
             using(BibliotecaContext bc = new BibliotecaContext())
             {
@@ -24,7 +32,7 @@ namespace Biblioteca.Models
             }
         }
 
-        public void editarUsuario (Usuario userEditado) 
+        public void EditarUsuario (Usuario userEditado) 
         {
              using(BibliotecaContext bc = new BibliotecaContext())
             {
@@ -44,6 +52,7 @@ namespace Biblioteca.Models
             using(BibliotecaContext bc = new BibliotecaContext())
             {
                 bc.Usuarios.Remove(bc.Usuarios.Find(id));
+                bc.SaveChanges();
             }
         }
 

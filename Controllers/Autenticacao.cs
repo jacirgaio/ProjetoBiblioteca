@@ -44,24 +44,24 @@ namespace Biblioteca.Controllers
                     
                 }
 
-                bc.SaveChanges();
             }
         }
 
         public static void verificaUsuarioAdmin(Controller controller)
         {
-            if (controller.HttpContext.Session.GetInt32("tipo") != Usuario.ADMIN);
+            if (controller.HttpContext.Session.GetInt32("tipo") != Usuario.ADMIN)
             {
-                controller.Request.HttpContext.Response.Redirect("/Usuarios/Admin");
+                controller.Request.HttpContext.Response.Redirect("/Usuario/Admin");
             }
         }
 
+ 
         public static void usuarioInicial()
         {
             using(BibliotecaContext bc = new BibliotecaContext())
             {
             
-                IQueryable<Usuario> usuarioEncontrado = bc.Usuarios.Where(u => u.Login == "admin");
+                IQueryable<Usuario> usuarioEncontrado = bc.Usuarios.Where(u => u.Login == "ADMIN");
 
                 if (usuarioEncontrado.ToList().Count == 0)
                 {

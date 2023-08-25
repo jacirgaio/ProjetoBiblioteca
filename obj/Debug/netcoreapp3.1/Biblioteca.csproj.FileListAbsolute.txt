@@ -51,7 +51,7 @@ C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Bibliotec
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Emprestimo\Cadastro.cshtml.g.cs
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Emprestimo\Edicao.cshtml.g.cs
 C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Emprestimo\Listagem.cshtml.g.cs
-C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\EditarUsuarios.cshtml.g.cs
-C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\ListarUsuarios.cshtml.g.cs
-C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\RegistrarUsuarios.cshtml.g.cs
-C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Admin.cshtml.g.cs
+C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Admin.cshtml.g.cs
+C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\ListarUsuarios.cshtml.g.cs
+C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\RegistrarUsuarios.cshtml.g.cs
+C:\Users\josiane\OneDrive\tii-jacir\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\EditarUsuario.cshtml.g.cs
